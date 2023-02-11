@@ -1,38 +1,306 @@
-.App {
-  text-align: center;
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #e6e6e6;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  width: 35%;
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chair {
+  width: 10%;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.table {
+  width: 50%;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.monitor {
+  width: 13%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
+.plant {
+  width: 9%;
+  position: absolute;
+  top: 71%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+}
+
+.lamp {
+  width: 5%;
+  position: absolute;
+  top: 72%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.screenshot {
+  width: 12.2%;
+  height: 14%;
+  position: absolute;
+  top: 67.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  z-index: -1;
+}
+
+#active-screenshot {
+  width: 12.2%;
+  height: 14%;
+  position: absolute;
+  top: 67.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  z-index: -1;
+  visibility: hidden;
+}
+
+#game-0 {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#game-1 {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: -25%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+}
+
+#game-2 {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+}
+
+#game-3 {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+}
+
+#game-4 {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+#game-5 {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+}
+
+#game-6 {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+}
+
+#game-7{
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 125%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+}
+
+#game-8 {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#game-9 {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 175%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#game-2-moved {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: -25%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+}
+
+#game-3-moved {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+}
+
+#game-5-moved {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+}
+
+#game-6-moved {
+  width: 18%;
+  height: 46%;
+  position: absolute;
+  top: 35%;
+  left: 125%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition-duration: 1s;
+}
+
+#cover-picture {
+  width: 40vw;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.description {
+  position: absolute;
+  font-size: .8vw;
+  left: 3%;
+  top: 30%;
+  width: 20%;
   color: white;
+  text-shadow: black 0px 0px 10px;
+  line-height: 125%;
+  font-family: 'Roboto';
 }
 
-.App-link {
-  color: #61dafb;
+.cover-picture-container {
+  width: 40vw;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.release-date {
+  position: absolute;
+  font-size: .8vw;
+  top: 30%;
+  left: 75%;
+  color: white;
+  text-shadow: black 0px 0px 10px;
+  line-height: 125%;
+  font-family: 'Roboto';
+}
+
+.steam {
+  position: absolute;
+  left: 77%;
+  top: 75%;
+  width: 6vw;
+  z-index: 10;
+}
+
+.makeTextAppear {
+  animation: makeTextAppear 2s linear;
+}
+
+@keyframes makeTextAppear {
+  0% {opacity: 0;}
+  30% {opacity: 0;}
+  100% {opacity: 1;}
 }
